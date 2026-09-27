@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="NovaCart is a modern responsive e-commerce product catalog."
+    >
+
+    <title>NovaCart | Modern Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <a href="#home" class="logo" aria-label="NovaCart Home">
+            NOVA<span>CART</span>
+        </a>
+
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button
+            class="cart-btn"
+            id="cartBtn"
+            type="button"
+            aria-label="Open shopping cart"
+        >
+            🛒 Cart
+            <span id="cartCount" aria-live="polite">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    ✦ CURATED FOR YOU
+                </p>
+
+                <h1>
+                    Discover products
+                    <span>you'll love.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Explore a carefully selected collection of
+                    modern products designed for everyday life.
+                </p>
+
+                <a href="#products" class="hero-btn">
+                    Explore Collection →
+                </a>
+
+            </div>
+
+
+            <div class="hero-art" aria-hidden="true">
+
+                <div class="floating-card card-one">
+                    ✨ Trending
+                </div>
+
+                <div class="product-orbit">
+
+                    <div class="circle circle-one"></div>
+                    <div class="circle circle-two"></div>
+
+                    <div class="hero-product">
+                        🎧
+                    </div>
+
+                </div>
+
+                <div class="floating-card card-two">
+                    ⭐ 4.9 Rating
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PRODUCTS
+        ========================== -->
+
+        <section class="products-section" id="products">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">
+                        OUR COLLECTION
+                    </p>
+
+                    <h2>
+                        Featured Products
+                    </h2>
+                </div>
+
+                <p
+                    class="product-count"
+                    id="productCount"
+                    aria-live="polite"
+                >
+                    8 products
+                </p>
+
+            </div>
+
+
+            <!-- FILTER BAR -->
+
+            <div class="filter-bar">
+
+                <!-- SEARCH -->
+
+                <div class="search">
+
+                    <span aria-hidden="true">🔎</span>
+
+                    <label
+                        for="searchInput"
+                        class="sr-only"
+                    >
+                        Search products
+                    </label>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search products..."
+                        aria-label="Search products"
+                    >
+
+                </div>
+
+
+                <!-- CATEGORIES -->
+
+                <div
+                    class="categories"
+                    role="group"
+                    aria-label="Product categories"
+                >
+
+                    <button
+                        class="category active"
+                        data-category="all"
+                        type="button"
+                        aria-pressed="true"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        class="category"
+                        data-category="electronics"
+                        type="button"
+                        aria-pressed="false"
+                    >
+                        Electronics
+                    </button>
+
+                    <button
+                        class="category"
+                        data-category="fashion"
+                        type="button"
+                        aria-pressed="false"
+                    >
+                        Fashion
+                    </button>
+
+                    <button
+                        class="category"
+                        data-category="accessories"
+                        type="button"
+                        aria-pressed="false"
+                    >
+                        Accessories
+                    </button>
+
+                </div>
+
+
+                <!-- SORT -->
+
+                <label
+                    for="sortSelect"
+                    class="sr-only"
+                >
+                    Sort products
+                </label>
+
+                <select
+                    id="sortSelect"
+                    aria-label="Sort products"
+                >
+
+                    <option value="default">
+                        Sort by
+                    </option>
+
+                    <option value="low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="high">
+                        Price: High to Low
+                    </option>
+
+                    <option value="rating">
+                        Highest Rated
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- PRODUCT GRID -->
+
+            <div
+                class="product-grid"
+                id="productGrid"
+                aria-live="polite"
+            ></div>
+
+
+            <!-- NO PRODUCTS -->
+
+            <div
+                class="no-products hidden"
+                id="noProducts"
+            >
+
+                <div aria-hidden="true">
+                    🔍
+                </div>
+
+                <h3>
+                    No products found
+                </h3>
+
+                <p>
+                    Try another search or category.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             WHY NOVACART
+        ========================== -->
+
+        <section
+            class="features"
+            id="about"
+            aria-label="Why NovaCart"
+        >
+
+            <div class="feature">
+
+                <div
+                    class="feature-icon"
+                    aria-hidden="true"
+                >
+                    ⚡
+                </div>
+
+                <h3>
+                    Fast Experience
+                </h3>
+
+                <p>
+                    Optimized interface designed
+                    for smooth browsing.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div
+                    class="feature-icon"
+                    aria-hidden="true"
+                >
+                    🔒
+                </div>
+
+                <h3>
+                    Secure Shopping
+                </h3>
+
+                <p>
+                    Built with a clean and
+                    user-friendly experience.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div
+                    class="feature-icon"
+                    aria-hidden="true"
+                >
+                    ♻️
+                </div>
+
+                <h3>
+                    Curated Products
+                </h3>
+
+                <p>
+                    Quality products selected
+                    for modern lifestyles.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         CART PANEL
+    ========================== -->
+
+    <aside
+        class="cart-panel"
+        id="cartPanel"
+        aria-label="Shopping cart"
+        aria-hidden="true"
+    >
+
+        <div class="cart-header">
+
+            <h2>
+                Your Cart
+            </h2>
+
+            <button
+                id="closeCart"
+                type="button"
+                aria-label="Close shopping cart"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-items"
+            id="cartItems"
+        >
+
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div>
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cartTotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+            <button
+                class="checkout"
+                type="button"
+            >
+                Proceed to Checkout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- OVERLAY -->
+
+    <div
+        class="overlay"
+        id="overlay"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="logo">
+            NOVA<span>CART</span>
+        </div>
+
+        <p>
+            Modern shopping, thoughtfully designed.
+        </p>
+
+        <small>
+            © 2026 NovaCart. All rights reserved.
+        </small>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
